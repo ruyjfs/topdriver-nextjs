@@ -24,3 +24,168 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Sobrescreve o estilo do MUI */
+.MuiButton-root {
+  text-transform: none !important;
+}
+
+.MuiButton-root {
+  text-transform: none !important;
+}
+
+.gradient.animate {
+  /* background: radial-gradient(
+    circle at top, */
+  background: linear-gradient(
+    144deg,
+    #ff0000,
+    #f9ff00,
+    #00ff20,
+    #00fff6,
+    #001cff,
+    #ba00ff,
+    #ff00ea,
+    #ff0000
+  );
+  background-size: 1600% 1600%;
+
+  -webkit-animation: AnimationName 300s ease infinite;
+  -moz-animation: AnimationName 300s ease infinite;
+  -o-animation: AnimationName 300s ease infinite;
+  animation: AnimationName 300s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+
+.gradient {
+  transition: background 3s;
+}
+.gradient.orange {
+  background: radial-gradient(circle at top, #fbd27d, #e06808);
+}
+
+.gradient.green {
+  background: radial-gradient(circle at top, #fbf17d, #099200);
+}
+.gradient.grey {
+  /* // background radial-gradient(circle at top, #9a9a98, #3f4040) */
+  background: radial-gradient(#666, #333);
+}
+.gradient.grey-light {
+  background: linear-gradient(to top right, #e0dede 20%, #fff);
+  /* // background: linear-gradient(to top right, #cecece 20%, #fff); */
+}
+.gradient.blue {
+  background: linear-gradient(141deg, #0874ff, #00aeff 51%, #0093ff 75%);
+}
+.gradient.gold {
+  background: radial-gradient(circle at center top, #ffe1a0, #885f04);
+}
+.gradient.blue-light {
+  /* // background: radial-gradient(circle at top, #7dfbf4, #00BCD4); */
+  background: radial-gradient(circle at top, #00fff0e6, #00dcfff5);
+}
+.gradient.yellow-light {
+  background: radial-gradient(
+    circle at center top,
+    rgb(251, 210, 125),
+    rgb(224, 158, 9)
+  );
+}
+.gradient.blue {
+  /* // background: radial-gradient(circle at center top, #49c4ff, #0969e0);
+  // background: linear-gradient(141deg,#0874ff,#00aeff 51%,#0093ff 75%); */
+  background: linear-gradient(141deg, #1f99f3, #27b8fb 51%, #1f99f3 75%);
+}
+.gradient.yellow {
+  background: radial-gradient(circle at center top, #fbd27d, #e09e09);
+}
+
+.gradient.blue-line {
+  /* // background: radial-gradient(circle at center top, #49c4ff, #0969e0); */
+  background: linear-gradient(141deg, #0969e0, #49c4ff 51%, #0969e0 75%);
+  /* // background: radial-gradient(circle at top, #00fff0e6, #00dcfff5) */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo-text {
+    animation: App-logo-text-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-text-spin {
+  /* from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  } */
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.App-logo {
+  height: 50vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
