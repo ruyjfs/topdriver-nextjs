@@ -22,23 +22,29 @@ export default function Page() {
               className="App-logo-text "
             />
           </div>
-          <nav className="flex items-center gap-2 flex-1 justify-center p-10  ">
-            <Button
-              target="_blank"
-              href="https://religare.app"
-              variant="outlined"
-              className="normal-case"
-            >
-              Religare Atomic App
-            </Button>
+          <nav className=" items-center gap-2 justify-center p-10 flex gap-4 flex-1 grid flex-col sm:flex sm:flex-row">
+            {/* flex-1 grid flex-col sm:bg-red-500 md:bg-blue-500 lg:bg-green-500 */}
             <Button
               component={Link as any}
               target="_blank"
               href="https://wiki.ruyjfs.com"
               variant="outlined"
-              className="normal-case backdrop-blur supports-[backdrop-filter]:bg-slate-100/20"
             >
               Ruy Wiki
+            </Button>
+            <Button
+              target="_blank"
+              href="https://religare.app"
+              variant="outlined"
+            >
+              Religare Atomic App
+            </Button>
+            <Button
+              target="_blank"
+              href="https://topdriver.app"
+              variant="outlined"
+            >
+              Top Driver
             </Button>
             <Button
               component={Link as any}
