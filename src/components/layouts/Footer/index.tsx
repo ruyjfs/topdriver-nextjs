@@ -10,7 +10,11 @@ export default function Footer() {
       <div className="mx-auto flex max-w-5xl items-center justify-center px-4 py-3">
         <p>
           Feito com ❤️ por{' '}
-          <Link href="/" className="text-lg font-semibold tracking-tight">
+          <Link
+            href="https://ruyjfs.com"
+            target="_blank"
+            className="text-lg font-semibold tracking-tight"
+          >
             ruyjfs.com{' '}
           </Link>{' '}
           | © {new Date().getFullYear()}

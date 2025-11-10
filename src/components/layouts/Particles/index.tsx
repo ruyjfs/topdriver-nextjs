@@ -24,13 +24,13 @@ export default function BackgroundParticles() {
           distance: 150,
           triangles: {
             enable: true,
-            opacity: 0.03,
+            opacity: 0.01,
           },
         },
         move: { enable: true, speed: 1 },
         number: { value: 200, density: { enable: true, area: 1000 } },
         opacity: { value: 0.4 },
-        size: { value: { min: 1, max: 3 } },
+        size: { value: { min: 1, max: 5 } },
         shape: { type: 'circle' },
       },
       interactivity: {
