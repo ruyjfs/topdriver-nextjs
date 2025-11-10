@@ -54,13 +54,15 @@ export default function Page() {
               Top Driver
             </Button> */}
           </nav>
-          <div className="flex justify-center items-center">
+          <div className="relative flex flex-1 justify-center items-center z-1000 w-full">
             <a
               style={{ width: 150, margin: 15 }}
               href="https://apps.apple.com/us/app/id1493537626"
               target="_blank"
             >
-              <img
+              <Image
+                width={150}
+                height={150}
                 src="/images/logos/optimized/apple-store-badge.png"
                 alt="logo AppStore"
               />
@@ -70,7 +72,9 @@ export default function Page() {
               href="https://play.google.com/store/apps/details?id=com.religarebr"
               target="_blank"
             >
-              <img
+              <Image
+                width={150}
+                height={150}
                 src="/images/logos/optimized/google-play-badge.png"
                 alt="logo GooglePlay"
               />
