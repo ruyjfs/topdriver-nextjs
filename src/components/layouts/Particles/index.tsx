@@ -16,11 +16,11 @@ export default function BackgroundParticles() {
       // background: { color: { value: '#0f172a' } },
       // fpsLimit: 60,
       particles: {
-        // color: { value: '#38bdf8' },
-        color: { value: '#ffffff' },
+        color: { value: '#9000ff' },
+        // color: { value: '#ffffff' },
         links: {
           enable: true,
-          color: '#ffffff',
+          color: '#ff0274',
           distance: 150,
           triangles: {
             enable: true,

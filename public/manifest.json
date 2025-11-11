@@ -1,12 +1,12 @@
 {
-  "theme_color": "#f63582",
-  "background_color": "#f63582",
-  "display": "standalone",
+  "name": "Top Driver - Amantes de um motor",
+  "short_name": "Top Driver",
+  "theme_color": "#ffe500",
+  "background_color": "#000000",
+  "display": "fullscreen",
+  "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
-  "name": "Religare",
-  "short_name": "Religare",
-  "description": "Vamos nos religar. Auto ajuda, auto conhecimento, evolu\u00e7\u00e3o pessoal, problemas pessoais, depress\u00e3o, ansiedade e muito mais.",
   "icons": [
     {
       "src": "/images/icons/android-icon-192x192.png",
@@ -80,28 +80,10 @@
       "density": "4.0"
     },
     {
-      "src": "/images/icons/apple-icon-120x120.png",
-      "sizes": "120x120",
-      "type": "image\/png",
-      "density": "4.0"
-    },
-    {
-      "src": "/images/icons/apple-icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image\/png",
-      "density": "4.0"
-    },
-    {
-      "src": "/images/icons/apple-icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image\/png",
-      "density": "4.0"
-    },
-    {
-      "src": "/images/icons/apple-icon-180x180.png",
-      "sizes": "180x180",
-      "type": "image\/png",
-      "density": "4.0"
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  ]
+  ],
+  "splash_pages": null
 }

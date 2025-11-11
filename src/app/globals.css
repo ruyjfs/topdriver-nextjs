@@ -32,6 +32,30 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(157deg, #ff6345, #ff0274, #e94d91, #ff95ea);
 }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background: rgb(0,31,255);
+  background: linear-gradient(151deg, rgba(0,31,255,1) 0%, rgba(255,0,254,1) 100%);
+
+  
+  background-color: #00DBDE;
+  background-image: linear-gradient(156deg, #00f2ff 0%,  #3d0b86 , #3d0b86 60%, #FC00FF 100%);
+
+  /* background-image: radial-gradient(circle at top,#fbd27d,#ffaf00,#ff6345,#ff6345) */
+  /* background-image: radial-gradient(circle at top,#7400c3 0%,#7400c3  60%,#FC00FF 100%) */
+  background-image: radial-gradient(circle at top,#00f2ff 0%,#3d0b86  20%,#3d0b86  60%,#FC00FF 100%);
+
+  /* background-image: radial-gradient(circle at top,#00f2ff 0%,#5400d0 20%,#5611bc 60%,#FC00FF 100%); */
+  background-image: radial-gradient(circle at top,#00f2ff 0%,#FC00FF 100%);
+  background-image: radial-gradient(circle at top,#2b2b2b 0%,#000000 100%);
+  /* background-image: linear-gradient(156deg, #000000, #2b2b2b, #000000); */
+  
+}
 
 /* Sobrescreve o estilo do MUI */
 .MuiButton-root {

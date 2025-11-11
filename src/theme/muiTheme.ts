@@ -12,6 +12,17 @@ export const theme = createTheme({
   },
   shape: { borderRadius: 12 },
   components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backdropFilter: 'blur(12px)',
+          backgroundColor: 'rgba(255, 255, 255, 0.08)',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)',
+          borderRadius: '1rem',
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
