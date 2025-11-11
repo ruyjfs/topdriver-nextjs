@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 // import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sobre',
+  title: 'Cadastro',
 };
 
 export default function Page() {

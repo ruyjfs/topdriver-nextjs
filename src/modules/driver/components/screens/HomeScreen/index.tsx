@@ -200,11 +200,14 @@ export default function HomeScreen() {
         </div>
 
         <nav className="flex items-center justify-center gap-4 my-5">
-          <Button component={Link as any} href="/sobre" variant="outlined">
-            Entre
+          {/* <Button component={Link as any} href="/login" variant="outlined">
+            Entrar
           </Button>
-          <Button component={Link as any} href="/sobre" variant="outlined">
-            Cadastre-se
+          <Button component={Link as any} href="/register" variant="outlined">
+            Cadastrar
+          </Button> */}
+          <Button component={Link as any} href="/about" variant="outlined">
+            Sobre
           </Button>
         </nav>
       </div>
