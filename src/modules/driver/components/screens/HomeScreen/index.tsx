@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Link from "next/link";
 import {
   Button,
   IconButton,
@@ -15,7 +15,7 @@ import {
   Card,
   CardContent,
   Chip,
-} from '@mui/material';
+} from "@mui/material";
 import {
   PlayArrow,
   Pause,
@@ -25,58 +25,58 @@ import {
   Shuffle,
   VolumeUp,
   VolumeOff,
-} from '@mui/icons-material';
+} from "@mui/icons-material";
 
-import logo from '@/../public/images/svgs/logo-colors.svg';
+import logo from "@/../public/images/svgs/logo-colors.svg";
 
 // Import dinâmico para evitar problemas de SSR no Next.js
-const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const playlist = [
-  { id: 'pshfBLj25Vs', name: 'HipHop - 60 Seconds Flowers' },
-  { id: 'hKnk1p7ZU6E', name: 'Antigas - 60 Seconds - Low Rider' },
+  { id: "pshfBLj25Vs", name: "HipHop - 60 Seconds Flowers" },
+  { id: "hKnk1p7ZU6E", name: "Antigas - 60 Seconds - Low Rider" },
   {
-    id: 'ubWL8VAPoYw',
-    name: 'HipHop - NFS Underground 2 - Riders on the Storm',
+    id: "ubWL8VAPoYw",
+    name: "HipHop - NFS Underground 2 - Riders on the Storm",
   },
-  { id: 'KAcBXo2gygA', name: 'Driver - Test Mission' },
-  { id: 'AhZQhix62VY', name: 'Gran Turismo' },
-  { id: 'ml-O4xDfZrU', name: 'Driver 4 - Yeah Yeah Yeahs' },
-  { id: 'lhTaFqyP-Kw', name: 'Antigas - Driver 4 - Marvin Gaye - Trouble Man' },
+  { id: "KAcBXo2gygA", name: "Driver - Test Mission" },
+  { id: "AhZQhix62VY", name: "Gran Turismo" },
+  { id: "ml-O4xDfZrU", name: "Driver 4 - Yeah Yeah Yeahs" },
+  { id: "lhTaFqyP-Kw", name: "Antigas - Driver 4 - Marvin Gaye - Trouble Man" },
   {
-    id: 'swYUBNqJFhU',
+    id: "swYUBNqJFhU",
     name: "Antigas - Driver 4 - The Jackson 5 - I'll Bet You",
   },
   {
-    id: 'nXiQtD5gcHU',
-    name: 'Antigas - Driver 4 - The Temptations - Papa Was A Rolling Stone',
+    id: "nXiQtD5gcHU",
+    name: "Antigas - Driver 4 - The Temptations - Papa Was A Rolling Stone",
   },
   {
-    id: 'IAYsNfg7-yg',
-    name: 'Antigas - The Animals - House of the Rising Sun',
+    id: "IAYsNfg7-yg",
+    name: "Antigas - The Animals - House of the Rising Sun",
   },
-  { id: 'oK6ZTcGkW4M', name: 'Antigas - NFS - Riders on the Storm' },
-  { id: 'nDl7ZhudkRg', name: 'Antigas - Driver 4 - Can • Dizzy Dizzy • 1974' },
+  { id: "oK6ZTcGkW4M", name: "Antigas - NFS - Riders on the Storm" },
+  { id: "nDl7ZhudkRg", name: "Antigas - Driver 4 - Can • Dizzy Dizzy • 1974" },
   {
-    id: 'oRMJoBu_kKM',
-    name: 'Antigas - Driver 4 - Blondie - One Way Or Another',
+    id: "oRMJoBu_kKM",
+    name: "Antigas - Driver 4 - Blondie - One Way Or Another",
   },
   {
-    id: 'P9_hegaKOaY',
-    name: 'Driver 3 - Iggy Pop & The Stooges - Gimme Danger',
+    id: "P9_hegaKOaY",
+    name: "Driver 3 - Iggy Pop & The Stooges - Gimme Danger",
   },
-  { id: 't4BaaEeGmJk', name: 'Rock - Iggy Pop - The Passenger' },
-  { id: 'okihP_CSuWA', name: 'Driver 3 - Apenas sinta' },
-  { id: '5RvNtzE_FAA', name: 'Driver 3 - Destiny by Syntax' },
-  { id: 'VS_C-Knke6g', name: 'Driver 3 - Big Brat by Phantom Planet' },
-  { id: 'iPuWzwwkbCU', name: 'Driver 3 - Main Title' },
-  { id: 'FI-DOZU7rbc', name: 'Antigas 2 - Drive Theme' },
-  { id: 'UItt_NMBgRk', name: '60 Seconds - Romantic' },
-  { id: 'lp4i6Yr8IqQ', name: 'Driver 2' },
-  { id: 'b0Jy6UodU9s', name: 'Driver - Test Mission' },
-  { id: 'QtIdeQVu9oM', name: 'Drive - Tick Of The Clock' },
-  { id: 'OHDqV1BEiqw', name: 'Drive' },
-  { id: '0tVWvzRYfP0', name: 'Music' },
+  { id: "t4BaaEeGmJk", name: "Rock - Iggy Pop - The Passenger" },
+  { id: "okihP_CSuWA", name: "Driver 3 - Apenas sinta" },
+  { id: "5RvNtzE_FAA", name: "Driver 3 - Destiny by Syntax" },
+  { id: "VS_C-Knke6g", name: "Driver 3 - Big Brat by Phantom Planet" },
+  { id: "iPuWzwwkbCU", name: "Driver 3 - Main Title" },
+  { id: "FI-DOZU7rbc", name: "Antigas 2 - Drive Theme" },
+  { id: "UItt_NMBgRk", name: "60 Seconds - Romantic" },
+  { id: "lp4i6Yr8IqQ", name: "Driver 2" },
+  { id: "b0Jy6UodU9s", name: "Driver - Test Mission" },
+  { id: "QtIdeQVu9oM", name: "Drive - Tick Of The Clock" },
+  { id: "OHDqV1BEiqw", name: "Drive" },
+  { id: "0tVWvzRYfP0", name: "Music" },
 ];
 
 function ytUrl(id: string) {
@@ -113,7 +113,7 @@ export default function HomeScreen() {
   const onEnded = useCallback(() => {
     if (repeat) {
       // reinicia o mesmo vídeo
-      playerRef.current?.seekTo(0, 'seconds');
+      playerRef.current?.seekTo(0, "seconds");
       setPlaying(true);
     } else {
       next();
@@ -124,7 +124,7 @@ export default function HomeScreen() {
     const v = Array.isArray(value) ? value[0] : value;
     if (!duration) return;
     const seconds = (v / 100) * duration;
-    playerRef.current?.seekTo(seconds, 'seconds');
+    playerRef.current?.seekTo(seconds, "seconds");
     setProgress(v);
   };
 
@@ -146,7 +146,7 @@ export default function HomeScreen() {
     setTimeout(() => {
       setPlaying(true);
       onReady();
-      console.log('FOI');
+      console.log("FOI");
     }, 4000);
   }, []);
 
@@ -206,6 +206,7 @@ export default function HomeScreen() {
           <Button component={Link as any} href="/register" variant="outlined">
             Cadastrar
           </Button> */}
+          {/*TESTE*/}
           <Button component={Link as any} href="/about" variant="outlined">
             Sobre
           </Button>
